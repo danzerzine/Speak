@@ -23,7 +23,7 @@ final class GeminiTranscriber {
             let text = try await client.transcribe(
                 wav: GeminiAPI.wav(trimmed),
                 model: model,
-                prompt: GeminiAPI.prompt(language: language, terms: terms),
+                prompt: GeminiAPI.prompt(language: language, terms: terms, removeFillers: prefs.removeFillers),
                 apiKey: apiKey
             ).trimmingCharacters(in: .whitespacesAndNewlines)
             let ms = Int(Date().timeIntervalSince(started) * 1000)

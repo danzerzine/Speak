@@ -592,6 +592,17 @@ private struct RecognitionPane: View {
             Section("Text") {
                 Toggle("Capitalize first letter", isOn: $prefs.autoCapitalize).controlSize(.small)
                 Toggle("End with a period", isOn: $prefs.autoPunctuation).controlSize(.small)
+                Toggle(isOn: $prefs.removeFillers) {
+                    RowLabel("Remove filler words", prefs.engine == .whisper
+                             ? "Comma-separated. Whole words only, any case."
+                             : "Gemini drops them by context and keeps the ones that carry meaning.")
+                }
+                .controlSize(.small)
+                if prefs.removeFillers && prefs.engine == .whisper {
+                    TextField("Filler words", text: $prefs.fillerWords, axis: .vertical)
+                        .lineLimit(2...4)
+                        .labelsHidden()
+                }
             }
         }
         .formStyle(.grouped)

@@ -64,7 +64,10 @@ final class TranscriptionCoordinator {
             autoCapitalize: prefs.autoCapitalize,
             // The blacklist targets Whisper's decoder inventing subtitle boilerplate on
             // silence. Parakeet and Gemini don't, so there "Спасибо" is real speech.
-            dropHallucinations: prefs.engine == .whisper && !prefs.modelID.isParakeet
+            dropHallucinations: prefs.engine == .whisper && !prefs.modelID.isParakeet,
+            // Gemini drops fillers by context in its prompt; local engines use the list.
+            fillers: prefs.removeFillers && prefs.engine == .whisper
+                ? TextCleaner.parseFillers(prefs.fillerWords) : []
         )
         pttLog("cleaned: \(logText(cleaned))")
         guard !cleaned.isEmpty else { return .empty }

@@ -142,6 +142,9 @@ public final class PreferencesStore: ObservableObject {
     @AppStorage("autoCapitalize")  public var autoCapitalize: Bool = true
     /// Turn the speakers down while recording so music doesn't reach the mic.
     @AppStorage("duckOutput")      public var duckOutput: Bool = false
+    @AppStorage("removeFillers")   public var removeFillers: Bool = false
+    /// Local engines only; Gemini drops fillers by context instead of a list.
+    @AppStorage("fillerWords")     public var fillerWords: String = TextCleaner.defaultFillers
     @AppStorage("metricsResetAtMs") public var metricsResetAtMs: Int = 0
     @AppStorage("inputDevice")     private var inputDeviceRaw: String = InputSelection.avoidBluetooth.rawValue
 
