@@ -216,3 +216,7 @@ It generates the project, builds a Release copy, installs it to `/Applications` 
 ## About this fork
 
 Speak! started as a fork of [timmal/HoldSpeak](https://github.com/timmal/HoldSpeak) and keeps its core idea. It adds the Parakeet engine, the correction dictionary with the Fix Spelling service, Gemini, and a new interface.
+
+## License
+
+MIT, see [LICENSE](LICENSE). The original HoldSpeak code is © timmal under the same license.
