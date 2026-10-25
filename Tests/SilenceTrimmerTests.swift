@@ -51,7 +51,7 @@ final class SilenceTrimmerTests: XCTestCase {
         }
     }
 
-    /// Logged HS-22 drops: noise≈0.004–0.007, peak≈0.02–0.03, voicedRun 30–60 ms over seconds of speech.
+    /// Levels from logged quiet-speech drops: noise≈0.004–0.007, peak≈0.02–0.03, voicedRun 30–60 ms over seconds of speech.
     private func quietSpeechClip(roomNoise: Float, level: Float, seed: UInt64) -> [Float] {
         let speech = silence(ms: 300) + quietSyllables(ms: 2400, level: level, seed: seed) + silence(ms: 300)
         return mix(noise(ms: 3000, amplitude: roomNoise, seed: seed + 100), speech)
