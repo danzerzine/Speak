@@ -77,6 +77,13 @@ public enum TextCleaner {
             || hallucinationPrefixes.contains { normalized.hasPrefix($0) }
     }
 
+    /// Faster than anyone talks: real dictations top out around 18 chars/s
+    /// (duration includes VAD padding). Longer text means the engine invented it,
+    /// as Gemini Flash-Lite does on silence, padding it out from the vocabulary.
+    public static func isImplausiblyLong(_ text: String, durationMs: Int) -> Bool {
+        text.count > 10 + durationMs * 30 / 1000
+    }
+
     public static func clean(
         _ input: String,
         terminology: [TerminologyEntry] = [],
