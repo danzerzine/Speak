@@ -76,7 +76,7 @@ final class TranscriptionCoordinator {
         pttLog("cleaned: \(logText(cleaned))")
         guard !cleaned.isEmpty else { return .empty }
 
-        let insertion = TextInserter.insert(cleaned + " ")
+        let insertion = await TextInserter.insert(cleaned + " ")
         pttLog("insertion: \(insertion)")
         // A password field gets nothing: not typed, and not kept in history (audit 2.10).
         if insertion == .skippedSecureField { return .skippedSecureField }
@@ -88,6 +88,7 @@ final class TranscriptionCoordinator {
             durationMs: result.durationMs,
             wordCount: cleaned.split(whereSeparator: { $0.isWhitespace }).count,
             language: result.language,
+            // Blind typing isn't confirmed by AX, so history doesn't claim it landed.
             inserted: insertion == .inserted
         )
         do {
@@ -104,6 +105,9 @@ final class TranscriptionCoordinator {
 
         switch insertion {
         case .inserted:          return .inserted
+        // Shown like an insertion: the text most likely landed, and a "No focused input"
+        // notification would be wrong more often than not.
+        case .typedBlind:        return .inserted
         case .skippedSecureField: return .skippedSecureField
         case .noFocus:           return .noFocus
         }
