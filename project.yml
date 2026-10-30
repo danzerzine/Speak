@@ -12,8 +12,8 @@ packages:
     url: https://github.com/groue/GRDB.swift
     majorVersion: 6.29.3
   WhisperKit:
-    url: https://github.com/argmaxinc/WhisperKit
-    minorVersion: 0.18.0
+    url: https://github.com/argmaxinc/argmax-oss-swift
+    minorVersion: 1.1.1
   FluidAudio:
     url: https://github.com/FluidInference/FluidAudio
     minorVersion: 0.17.5
