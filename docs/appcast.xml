@@ -4,6 +4,16 @@
     <title>Speak!</title>
     <link>https://danzerzine.github.io/Speak/</link>
     <item>
+      <title>Speak! 0.3.6</title>
+      <pubDate>Fri, 30 Oct 2026 09:30:37 GMT</pubDate>
+      <sparkle:version>190</sparkle:version>
+      <sparkle:shortVersionString>0.3.6</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:fullReleaseNotesLink>https://github.com/danzerzine/Speak/releases/tag/v0.3.6</sparkle:fullReleaseNotesLink>
+      <description><![CDATA[<ul><li>Settings can now remove filler words such as &quot;um&quot; and &quot;ну&quot; (off by default).</li><li>Pressing the hotkey without speaking no longer produces made-up text.</li><li>Quiet speech is no longer dropped.</li><li>Bluetooth headphones keep their full sound quality while you dictate.</li><li>Whisper models run on the updated WhisperKit 1.1.</li></ul>]]></description>
+      <enclosure url="https://github.com/danzerzine/Speak/releases/download/v0.3.6/Speak-0.3.6.dmg" sparkle:edSignature="ETQCTCBdqhf4d5FbE30y3k6qq8EjLa3VgkREeuvCnBHUkUmyDubQUo5wfGF+YycHxDIpub24yf19HoKm94p6Cg==" length="17557095" type="application/octet-stream"/>
+    </item>
+    <item>
       <title>Speak! 0.3.5</title>
       <pubDate>Sat, 10 Oct 2026 10:03:10 GMT</pubDate>
       <sparkle:version>180</sparkle:version>
