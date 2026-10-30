@@ -5,8 +5,7 @@ options:
     macOS: "14.0"
   createIntermediateGroups: true
 
-# Minor-pinned to the versions the app is built and tested with: 0.x releases may
-# break the API (ParakeetVocabulary relies on FluidAudio internals). Bump deliberately.
+# Generated from Package.swift by scripts/sync-packages.py: change versions there.
 packages:
   GRDB:
     url: https://github.com/groue/GRDB.swift

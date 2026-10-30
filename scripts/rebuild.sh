@@ -2,7 +2,8 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-# Ensure xcodeproj is up to date
+# Ensure xcodeproj is up to date, with the package versions from Package.swift
+python3 scripts/sync-packages.py
 if command -v xcodegen >/dev/null 2>&1; then
   xcodegen generate >/dev/null
 fi

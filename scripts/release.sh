@@ -64,6 +64,7 @@ BUILD_NUMBER="$(git rev-list --count HEAD)"
 /usr/bin/sed -i '' "s/MARKETING_VERSION: \".*\"/MARKETING_VERSION: \"$VERSION\"/" project.yml
 /usr/bin/sed -i '' "s/CFBundleVersion: \".*\"/CFBundleVersion: \"$BUILD_NUMBER\"/" project.yml
 
+python3 scripts/sync-packages.py
 xcodegen generate >/dev/null
 
 pkill -x Speak 2>/dev/null || true
