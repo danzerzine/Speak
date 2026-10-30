@@ -6,7 +6,6 @@
   { "id": "7A000001-0000-0000-0000-000000000005", "canonical": "merge", "variants": [], "caseSensitive": false },
   { "id": "7A000001-0000-0000-0000-000000000006", "canonical": "commit", "variants": [], "caseSensitive": false },
   { "id": "7A000001-0000-0000-0000-000000000007", "canonical": "squash", "variants": [], "caseSensitive": false },
-  { "id": "7A000001-0000-0000-0000-000000000008", "canonical": "stash", "variants": [], "caseSensitive": false },
   { "id": "7A000001-0000-0000-0000-000000000009", "canonical": "code review", "variants": ["codereview"], "caseSensitive": false },
   { "id": "7A000001-0000-0000-0000-00000000000A", "canonical": "refactor", "variants": [], "caseSensitive": false },
 

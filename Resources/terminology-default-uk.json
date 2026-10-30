@@ -6,7 +6,6 @@
   { "id": "5A000001-0000-0000-0000-000000000005", "canonical": "branch", "variants": ["бранч", "бренч"], "caseSensitive": false },
   { "id": "5A000001-0000-0000-0000-000000000006", "canonical": "force push", "variants": ["форс пуш", "форспуш"], "caseSensitive": false },
   { "id": "5A000001-0000-0000-0000-000000000007", "canonical": "cherry-pick", "variants": ["черрі пік", "черрі-пік", "черріпік"], "caseSensitive": false },
-  { "id": "5A000001-0000-0000-0000-000000000008", "canonical": "stash", "variants": ["стеш", "стэш"], "caseSensitive": false },
   { "id": "5A000001-0000-0000-0000-000000000009", "canonical": "revert", "variants": ["реверт", "ревертнути"], "caseSensitive": false },
   { "id": "5A000001-0000-0000-0000-00000000000A", "canonical": "squash", "variants": ["сквош", "сквошити"], "caseSensitive": false },
   { "id": "5A000001-0000-0000-0000-00000000000B", "canonical": "conflict", "variants": ["конфлікт"], "caseSensitive": false },
