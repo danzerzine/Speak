@@ -12,7 +12,7 @@ let package = Package(
     // Minor-pinned where 0.x or internals are relied on (ParakeetVocabulary uses
     // FluidAudio internals). Only GRDB is used by the targets below.
     dependencies: [
-        .package(url: "https://github.com/groue/GRDB.swift", from: "6.29.3"),
+        .package(url: "https://github.com/groue/GRDB.swift", from: "7.11.1"),
         .package(url: "https://github.com/argmaxinc/argmax-oss-swift", .upToNextMinor(from: "1.1.1")),
         .package(url: "https://github.com/FluidInference/FluidAudio", .upToNextMinor(from: "0.17.5")),
         .package(url: "https://github.com/sparkle-project/Sparkle", from: "2.7.0"),
