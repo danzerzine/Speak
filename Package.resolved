@@ -1,5 +1,5 @@
 {
-  "originHash" : "8e4622a00b71459a294c73235d1ffa9ee1c847c78e6c2ee6722753e78fcc388b",
+  "originHash" : "6fb338f7c8b299f3ec0308463cfaa9066026b9b094f58459bd0aa66bdca259ea",
   "pins" : [
     {
       "identity" : "argmax-oss-swift",
@@ -24,8 +24,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/groue/GRDB.swift",
       "state" : {
-        "revision" : "2cf6c756e1e5ef6901ebae16576a7e4e4b834622",
-        "version" : "6.29.3"
+        "revision" : "b83108d10f42680d78f23fe4d4d80fc88dab3212",
+        "version" : "7.11.1"
       }
     },
     {
